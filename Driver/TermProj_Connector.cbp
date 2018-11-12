@@ -38,7 +38,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="doc/Design V.One list TimeTracker.pdf" />
+		<Unit filename="doc/Term_Project_Basic_Structure.pdf" />
+		<Unit filename="doc/Term_Project_Flowchart.pdf" />
 		<Unit filename="include/conDB.h" />
+		<Unit filename="include/html_output.h" />
 		<Unit filename="include/jdbc/cppconn/build_config.h" />
 		<Unit filename="include/jdbc/cppconn/config.h" />
 		<Unit filename="include/jdbc/cppconn/connection.h" />
@@ -98,7 +102,14 @@
 		<Unit filename="lib/vs14/mysqlcppconn8.lib" />
 		<Unit filename="lib/vs14/ssleay32.lib" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/conDB.cpp" />
+		<Unit filename="output/HTML/Login_Page.html" />
+		<Unit filename="output/HTML/View_Chart_Type_One.html" />
+		<Unit filename="output/HTML/View_Chart_Type_Two.html" />
+		<Unit filename="output/HTML/Your_People_List.html" />
+		<Unit filename="output/HTML/index (4).html" />
+		<Unit filename="src/client/html_output.cpp" />
+		<Unit filename="src/server/conDB.cpp" />
+		<Unit filename="src/server/mySQL_Connection.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

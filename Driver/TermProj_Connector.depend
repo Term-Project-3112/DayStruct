@@ -1,7 +1,9 @@
 # depslib dependency file v1.0
-1541822999 source:c:\users\allie\desktop\term_project_driver\termproj_connector\main.cpp
+1542049641 source:c:\users\allie\desktop\term_project_driver\termproj_connector\main.cpp
 	<iostream>
+	<fstream>
 	"conDB.h"
+	"html_output.h"
 
 1541797064 source:c:\users\allie\desktop\term_project_driver\termproj_connector\src\mysql_connection.cpp
 	"mySQL_Connection.h"
@@ -1833,4 +1835,26 @@
 1537981082 c:\users\allie\desktop\term_project_driver\termproj_connector\include\jdbc\cppconn\prepared_statement.h
 	<iostream>
 	"statement.h"
+
+1541823028 source:c:\users\allie\desktop\term_project_driver\termproj_connector\src\server\condb.cpp
+	<stdlib.h>
+	<iostream>
+	"jdbc/mysql_connection.h"
+	"jdbc/mysql_driver.h"
+	"jdbc/cppconn/exception.h"
+	"jdbc/cppconn/resultset.h"
+	"jdbc/cppconn/statement.h"
+	"jdbc/cppconn/prepared_statement.h"
+	"conDB.h"
+
+1541797064 source:c:\users\allie\desktop\term_project_driver\termproj_connector\src\server\mysql_connection.cpp
+	"mySQL_Connection.h"
+
+1542049627 c:\users\allie\desktop\term_project_driver\termproj_connector\include\html_output.h
+
+1542050243 source:c:\users\allie\desktop\term_project_driver\termproj_connector\src\html_output.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	"html_output.h"
 
