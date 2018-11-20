@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1542049641 source:c:\users\allie\desktop\term_project_driver\termproj_connector\main.cpp
+1542519797 source:c:\users\allie\desktop\term_project_driver\termproj_connector\main.cpp
 	<iostream>
 	<fstream>
 	"conDB.h"
@@ -10,7 +10,7 @@
 
 1541797064 c:\users\allie\desktop\term_project_driver\termproj_connector\include\mysql_connection.h
 
-1541797448 c:\users\allie\desktop\term_project_driver\termproj_connector\include\condb.h
+1542521566 c:\users\allie\desktop\term_project_driver\termproj_connector\include\condb.h
 
 1541823028 source:c:\users\allie\desktop\term_project_driver\termproj_connector\src\condb.cpp
 	<stdlib.h>
@@ -1836,9 +1836,10 @@
 	<iostream>
 	"statement.h"
 
-1541823028 source:c:\users\allie\desktop\term_project_driver\termproj_connector\src\server\condb.cpp
+1542589049 source:c:\users\allie\desktop\term_project_driver\termproj_connector\src\server\condb.cpp
 	<stdlib.h>
 	<iostream>
+	<mysql.h>
 	"jdbc/mysql_connection.h"
 	"jdbc/mysql_driver.h"
 	"jdbc/cppconn/exception.h"
@@ -1857,4 +1858,59 @@
 	<fstream>
 	<stdlib.h>
 	"html_output.h"
+
+1542052616 source:c:\users\allie\desktop\term_project_driver\termproj_connector\src\client\html_output.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	"html_output.h"
+
+1538073494 source:c:\users\allie\desktop\term_project_driver\termproj_connector\include\openssl\applink.c
+	<stdio.h>
+	<io.h>
+	<fcntl.h>
+
+1538927062 c:\users\allie\desktop\term_project_driver\termproj_connector\include\mysql.h
+	<stdbool.h>
+	<stddef.h>
+	<sys/types.h>
+	<windows.h>
+	<winsock2.h>
+	"binary_log_types.h"
+	"my_list.h"
+	"mysql_com.h"
+	"mysql/client_plugin.h"
+	"mysql_version.h"
+	"mysql_time.h"
+	"errmsg.h"
+
+1538927062 c:\users\allie\desktop\term_project_driver\termproj_connector\include\binary_log_types.h
+
+1538927062 c:\users\allie\desktop\term_project_driver\termproj_connector\include\my_list.h
+
+1538927062 c:\users\allie\desktop\term_project_driver\termproj_connector\include\mysql_com.h
+	<stdbool.h>
+	"my_command.h"
+	"my_io.h"
+	<stdbool.h>
+	<mysql/udf_registration_types.h>
+
+1538927062 c:\users\allie\desktop\term_project_driver\termproj_connector\include\my_command.h
+
+1538927062 c:\users\allie\desktop\term_project_driver\termproj_connector\include\mysql\udf_registration_types.h
+	<stdbool.h>
+
+1538927062 c:\users\allie\desktop\term_project_driver\termproj_connector\include\mysql\client_plugin.h
+	<stdarg.h>
+	<stdlib.h>
+	"plugin_auth_common.h"
+
+1538927062 c:\users\allie\desktop\term_project_driver\termproj_connector\include\mysql\plugin_auth_common.h
+	<windows.h>
+
+1538929818 c:\users\allie\desktop\term_project_driver\termproj_connector\include\mysql_version.h
+
+1538927062 c:\users\allie\desktop\term_project_driver\termproj_connector\include\mysql_time.h
+
+1538927062 c:\users\allie\desktop\term_project_driver\termproj_connector\include\errmsg.h
 

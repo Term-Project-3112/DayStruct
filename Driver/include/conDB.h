@@ -6,6 +6,7 @@ class conDB
 {
     public:
         conDB();
+        void connect();
         virtual ~conDB();
 
     protected:

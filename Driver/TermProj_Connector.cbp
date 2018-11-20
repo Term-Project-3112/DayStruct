@@ -41,7 +41,9 @@
 		<Unit filename="doc/Design V.One list TimeTracker.pdf" />
 		<Unit filename="doc/Term_Project_Basic_Structure.pdf" />
 		<Unit filename="doc/Term_Project_Flowchart.pdf" />
+		<Unit filename="include/binary_log_types.h" />
 		<Unit filename="include/conDB.h" />
+		<Unit filename="include/errmsg.h" />
 		<Unit filename="include/html_output.h" />
 		<Unit filename="include/jdbc/cppconn/build_config.h" />
 		<Unit filename="include/jdbc/cppconn/config.h" />
@@ -62,6 +64,17 @@
 		<Unit filename="include/jdbc/mysql_connection.h" />
 		<Unit filename="include/jdbc/mysql_driver.h" />
 		<Unit filename="include/jdbc/mysql_error.h" />
+		<Unit filename="include/mySQL_Connection.h" />
+		<Unit filename="include/my_command.h" />
+		<Unit filename="include/my_list.h" />
+		<Unit filename="include/mysql.h" />
+		<Unit filename="include/mysql/client_plugin.h" />
+		<Unit filename="include/mysql/plugin_auth_common.h" />
+		<Unit filename="include/mysql/udf_registration_types.h" />
+		<Unit filename="include/mysql_com.h" />
+		<Unit filename="include/mysql_time.h" />
+		<Unit filename="include/mysql_version.h" />
+		<Unit filename="include/mysqld_error.h" />
 		<Unit filename="include/mysqlx/common.h" />
 		<Unit filename="include/mysqlx/common/api.h" />
 		<Unit filename="include/mysqlx/common/error.h" />
@@ -91,6 +104,12 @@
 		<Unit filename="include/mysqlx/devapi/table_crud.h" />
 		<Unit filename="include/mysqlx/xapi.h" />
 		<Unit filename="include/mysqlx/xdevapi.h" />
+		<Unit filename="include/mysqlx_ername.h" />
+		<Unit filename="include/mysqlx_error.h" />
+		<Unit filename="include/mysqlx_version.h" />
+		<Unit filename="include/openssl/applink.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="lib/libeay32.dll" />
 		<Unit filename="lib/mysqlcppconn-7-vs14.dll" />
 		<Unit filename="lib/mysqlcppconn8-1-vs14.dll" />

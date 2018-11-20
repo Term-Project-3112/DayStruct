@@ -7,9 +7,9 @@ using namespace std;
 
 int main () {
 
-    html_output testOP;
+    conDB cdb;
 
-    testOP.createTestPage();
+    cdb.connect();
 
-   return 0;
+    return 0;
 }

@@ -23,6 +23,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 #include <stdlib.h>
 #include <iostream>
 
+#include <mysql.h>
+
 /*
   Include directly the different
   headers from cppconn/ and mysql_driver.h + mysql_util.h
@@ -42,48 +44,65 @@ using namespace std;
 
 conDB::conDB()
 {
-    cout << endl;
-    cout << "Let's have MySQL count from 10 to 1..." << endl;
 
+}
+
+void conDB::connect(){
+
+    cout << "DATABASE CONNECTOR TEST" << endl;
     try {
-      sql::Driver *driver;
-      sql::Connection *con;
-      sql::Statement *stmt;
-      sql::ResultSet *res;
-      sql::PreparedStatement *pstmt;
+
+      string dbDataTestOne;
+      string dbDataTestTwo;
+
+      MYSQL *con;
+      mysql_init(con);
 
       /* Create a connection */
       //driver = get_driver_instance();
-      con = driver->connect("tcp://127.0.0.1:3306", "root", "root");
+      cout << "connecting::::" << endl;
+      //con = driver->connect("tcp://127.0.0.1:3306", "root", "112211");
+      con = mysql_real_connect(con,"localhost","root","112211","DAYSTRUCT_DATABASE",0,0,0);
       cout << "Connected using tcp://127.0.0.1:3306, root, root" << endl;
 
-      /* Connect to the MySQL test database */
-      con->setSchema("test");
-
-      stmt = con->createStatement();
-      stmt->execute("DROP TABLE IF EXISTS test");
-      stmt->execute("CREATE TABLE test(id INT)");
-      delete stmt;
-
-      /* '?' is the supported placeholder syntax */
-      pstmt = con->prepareStatement("INSERT INTO test(id) VALUES (?)");
-      for (int i = 1; i <= 10; i++) {
-        pstmt->setInt(1, i);
-        pstmt->executeUpdate();
+      mysql_query(con, "SELECT user_name FROM users WHERE users.ID = 1");
+      MYSQL_RES *res = mysql_store_result(con);
+      int totalRows = mysql_num_rows(res);
+      int numFields = mysql_num_fields(res);
+      MYSQL_FIELD *mfield;
+      char** row;
+      while((row = mysql_fetch_row(res))){
+        for(int i = 0; i < numFields; i++){
+            char *val = row[i];
+            cout <<val<< endl;
+        }
       }
-      delete pstmt;
 
-      /* Select in ascending order */
-      pstmt = con->prepareStatement("SELECT id FROM test ORDER BY id ASC");
-      res = pstmt->executeQuery();
+/** **********A query that gets the username of the user with the ID 1**********
+      // execute a query to get the username of user with the ID 1
+      res = mysql_stmt_result_metadata("SELECT user_name FROM users WHERE users.ID = 1");
+      //res = stmt->result();
+      // run while loop for each value returned by the query
+      while(res->next()){
+        // test data equals the string of the value. In this case the username.
+        dbDataTestOne = res->getString("user_name");
+        cout << dbDataTestOne << endl;
+      }
+ ***************************************************************************** **/
 
-      /* Fetch in reverse = descending order! */
-      res->afterLast();
-      while (res->previous())
-        cout << "\t... MySQL counts: " << res->getInt("id") << endl;
-      delete res;
+/** **********A query that gets the password of the user with the ID 1**********
+      // prepare a query to get the password of user with the ID
+      stmt = mysql_stmt_init("SELECT password_s FROM logins WHERE logins.ID = 1");
+      res = stmt->result();
+      // run while loop for each value returned by the query
+      while(res->next()){
+        // test data equals the string of the value. In this case the password.
+        dbDataTestTwo = res->getString("password_s");
+        cout << dbDataTestTwo << endl;
+      }
+***************************************************************************** **/
 
-      delete pstmt;
+      // delete the connection
       delete con;
 
     } catch (sql::SQLException &e) {
@@ -95,7 +114,6 @@ conDB::conDB()
     }
 
     cout << endl;
-
 }
 
 conDB::~conDB()
